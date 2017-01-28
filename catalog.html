@@ -3,13 +3,16 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси-Каталог</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header class="main-header">
-    <div class="container">
+    <div class="container clearfix">
       <div class="logo">
-        <img src="#" alt="Магазин мороженого «Глейси»">
+        <a href="index.html">
+          <img src="img/logo/main-logo.png" alt="Магазин мороженого «Глейси»">
+        </a>
       </div>
       <nav class="main-navigation">
       <ul class="main-navigation-list">
@@ -37,10 +40,13 @@
         <a class="basket" href="">2 товара</a>
       </div>
     </div>
+    <div class="schedule">С 10 до 20, ежедневно<br>
+      8 812 450-25-25
+    </div>
   </header>
   
   <main class="main">
-    <div class="container">
+    <div class="container clearfix">
       <section class="breadcrumbs">
         <ul class="breadcrumbs-list">
           <li>
@@ -54,10 +60,12 @@
           </li>
         </ul>
       </section>
+      
+      <div class="page-title clearfix">
+        <h1 class="page-title-text">Сливочное мороженое</h1>
+      </div>
 
-      <h1 class="page-title">Сливочное мороженое</h1>
-
-      <form class="filters" method="post">
+      <form class="filters clearfix" method="post">
         <div class="filter-item"> 
           <select id="sort">
             <option value="s1">По популярности</option>
@@ -65,7 +73,7 @@
           </select>
           <label for="sort"><b class="options">Сортировка:</b></label>
         </div>
-        <div class="range">
+        <div class="filter-item">
           <b class="options">Цена: 100 руб. - 500 руб.</b>
           <input type="range" name="range" id="range" min="100" max="500">
         </div> 
@@ -111,69 +119,69 @@
             <label for="jams">джемы</label>
           </div>
         </div>
-        <input type="submit" name="Применить">
+        <input type="submit" name="Применить" value="Применить">
       </form>
 
-      <section class="product-items">
+      <section class="product-items clearfix">
         <article class="product-teaser">
-          <img class="product-photo" src="#" alt="Изображение товара">
+          <img class="product-photo" src="img/products/main/icecream-orange.jpg" alt="Изображение мороженого">
           <p class="price">310 &#8381;/кг</p>
-          <p class="product-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+          <h3 class="product-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
         </article>
         <article class="product-teaser">
-          <img class="product-photo" src="#" alt="Изображение товара">
+          <img class="product-photo" src="img/products/main/icecream-coffee.jpg" alt="Изображение мороженого">
           <p class="price">380 &#8381;/кг</p>
-          <p class="product-title">Сливочно-кофейное с кусочками шоколада</p>
+          <h3 class="product-title">Сливочно-кофейное с кусочками шоколада</h3>
         </article>
         <article class="product-teaser">
-          <img class="product-photo" src="#" alt="Изображение товара">
+          <img class="product-photo" src="img/products/main/icecream-strawberry.jpg" alt="Изображение мороженого">
           <p class="price">355 &#8381;/кг</p>
-          <p class="product-title">Сливочно-клубничное с присыпкой из белого шоколада</p>
+          <h3 class="product-title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
         </article>
         <article class="product-teaser">
-          <img class="product-photo" src="#" alt="Изображение товара">
+          <img class="product-photo" src="img/products/main/icecream-caramel.jpg" alt="Изображение мороженого">
           <p class="price">415 &#8381;/кг</p>
-          <p class="product-title">Сливочное крем-брюле с карамельной подливкой</p>
+          <h3 class="product-title">Сливочное крем-брюле с карамельной подливкой</h3>
         </article>
         <article class="product-teaser">
-          <img class="product-photo" src="#" alt="Изображение товара">
+          <img class="product-photo" src="img/products/catalog/icecream-cowberry.jpg" alt="Изображение мороженого">
           <p class="price">325 &#8381;/кг</p>
-          <p class="product-title">Сливочное с брусничным джемом</p>
+          <h3 class="product-title">Сливочное с брусничным джемом</h3>
         </article>
         <article class="product-teaser">
-          <img class="product-photo" src="#" alt="Изображение товара">
+          <img class="product-photo" src="img/products/catalog/icecream-bilberry.jpg" alt="Изображение мороженого">
           <p class="price">410 &#8381;/кг</p>
-          <p class="product-title">Сливочно-черничное с цельными ягодами черники</p>
+          <h3 class="product-title">Сливочно-черничное с цельными ягодами черники</h3>
         </article>
         <article class="product-teaser">
-          <img class="product-photo" src="#" alt="Изображение товара">
+          <img class="product-photo" src="img/products/catalog/icecream-lemon.jpg" alt="Изображение мороженого">
           <p class="price">375 &#8381;/кг</p>
-          <p class="product-title">Сливочно-лимонное с карамельной присыпкой</p>
+          <h3 class="product-title">Сливочно-лимонное с карамельной присыпкой</h3>
         </article>
         <article class="product-teaser">
-          <img class="product-photo" src="#" alt="Изображение товара">
+          <img class="product-photo" src="img/products/catalog/icecream-chocolate-chips.jpg" alt="Изображение мороженого">
           <p class="price">320 &#8381;/кг</p>
-          <p class="product-title">Сливочное с шоколадной стружкой</p>
+          <h3 class="product-title">Сливочное с шоколадной стружкой</h3>
         </article>
         <article class="product-teaser">
-          <img class="product-photo" src="#" alt="Изображение товара">
+          <img class="product-photo" src="img/products/catalog/icecream-chocolate-pieces.jpg" alt="Изображение мороженого">
           <p class="price">440 &#8381;/кг</p>
-          <p class="product-title">Сливочно-ванильное с кусочками шоколада</p>
+          <h3 class="product-title">Сливочно-ванильное с кусочками шоколада</h3>
         </article>
         <article class="product-teaser">
-          <img class="product-photo" src="#" alt="Изображение товара">
+          <img class="product-photo" src="img/products/catalog/icecream-menthol.jpg" alt="Изображение мороженого">
           <p class="price">435 &#8381;/кг</p>
-          <p class="product-title">Сливочноe с ментоловым сиропом</p>
+          <h3 class="product-title">Сливочноe с ментоловым сиропом</h3>
         </article>
         <article class="product-teaser">
-          <img class="product-photo" src="#" alt="Изображение товара">
+          <img class="product-photo" src="img/products/catalog/icecream-chocolate-black.jpg" alt="Изображение мороженого">
           <p class="price">355 &#8381;/кг</p>
-          <p class="product-title">Сливочное с кусочками черного шоколада</p>
+          <h3 class="product-title">Сливочное с кусочками черного шоколада</h3>
         </article>
         <article class="product-teaser">
-          <img class="product-photo" src="#" alt="Изображение товара">
+          <img class="product-photo" src="img/products/catalog/icecream-mint.jpg" alt="Изображение мороженого">
           <p class="price">420 &#8381;/кг</p>
-          <p class="product-title">Сливочное с мятным сиропом</p>
+          <h3 class="product-title">Сливочное с мятным сиропом</h3>
         </article>
       </section>
       <section class="pagination">
@@ -186,7 +194,7 @@
     </div>
   </main>
 
-  <footer class="main-footer">
+  <footer class="main-footer clearfix">
     <div class="container">
       <section class="footer-social">
         <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
