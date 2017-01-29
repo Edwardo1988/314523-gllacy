@@ -126,6 +126,7 @@ background-color: red;
 }
 
 .slider {
+  min-height: 495px;
   margin-bottom: 40px;
 }
 
