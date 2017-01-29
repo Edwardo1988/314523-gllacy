@@ -6,7 +6,7 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="page-teal">
   <header class="main-header">
     <div class="container clearfix">
       <div class="logo">
@@ -43,8 +43,24 @@
         </ul>
       </nav>
       <div class="links">
-        <button class="search">Поиск</button>
-        <a class="login" href="">Вход</a>
+        <div class="search-form">
+          <button class="search-btn">Поиск</button>
+          <div class="search-content">
+            <input class="form-text" type="text" placeholder="Что ищем?">
+          </div>
+        </div>
+        <div class="login">
+          <div class="login-btn" href="">Вход</div>
+          <div class="login-content">
+            <form class="login-form">
+              <input class="form-text" type="email" name="email" placeholder="Электронная почта">
+              <input class="form-text" type="password" name="password" placeholder="Пароль">
+              <a class="btn btn-login" href="#">Войти</a>
+              <a class="login-link" href="#">Забыли пароль</a>
+              <a class="login-link" href="#">Новая регистрация</a>
+            </form>
+          </div>
+        </div>
         <a class="basket" href="">Пусто</a>
       </div>
     </div>
@@ -56,33 +72,38 @@
   <main class="main">
     <div class="container">
       <section class="slider clearfix">
-        <div class="slider-content">
-          <img src="#" alt="Крем-брюле и пломбир с малиновым джемом">
-          <h2 class="slider-name">
-            Крем-брюле и пломбир с малиновым джемом
-          </h2>
-          <a class="slider-buy" href="">Давайте оба!</a>
+        <div class="slider-content slide-teal">
+          <h2 class="slider-name">Крем-брюле и пломбир с малиновым джемом</h2>
+          <a class="btn slider-buy" href="#">Давайте оба!</a>
+        </div>
+        <div class="slider-content slide-blue">
+          <h2 class="slider-name">Шоколадный пломбир и лимонный сорбет</h2>
+          <a class="btn slider-buy" href="#">Давайте оба!</a>
+        </div>
+        <div class="slider-content slide-chestnut">
+          <h2 class="slider-name">Пломбир с помадкой и клубничный щербет</h2>
+          <a class="btn slider-buy" href="#">Давайте оба!</a>
         </div>
       </section>
 
       <section class="banners clearfix">
         <div class="banner-item">
-          <img src="img/banners/malina-banner-background.jpg" alt="Малинка даром!">
+          <img src="#" alt="Малинка даром!">
           <h3 class="banner-name">Малинка даром!</h3>
           <p class="banner-description">
             При покупке 2 кг любого фруктового мороженого, 
             добавим в ваш заказ банку малинового варенья бесплатно.
           </p>
-          <a class="banner-buy" href="">Хочу варенье!</a>
+          <a class="btn banner-buy" href="">Хочу варенье!</a>
         </div>
         <div class="banner-item">
-          <img src="img/banners/chocolate-banner-background.jpg" alt="Шоколадки даром!">
+          <img src="#" alt="Шоколадки даром!">
           <h3 class="banner-name">Шоколадки даром!</h3>
           <p class="banner-description">
             При покупке 2 кг пломбира, добавим в ваш заказ 
             упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
           </p>
-          <a class="banner-buy" href="">Хочу шоколадки!</a>
+          <a class="btn banner-buy" href="">Хочу шоколадки!</a>
         </div>
       </section>
 
@@ -163,37 +184,38 @@
             нас происходит. Обещаем не спамить и не слать 
             всякой ненужной ерунды. Честно =)
           </p>
-          <input type="email" name="email" placeholder="Электронная почта">
-          <input type="submit" name="Отправить">
+          <input class="form-text" type="email" name="email" placeholder="Электронная почта">
+          <input class="form-text" type="submit" name="Отправить">
         </form>
       </section>
 
-      <section class="map">
-        <img src="img/map/map.jpg" alt="Изображение карты">
-        <div class="contacts">
-          <p class="address">
-            Адрес главного офиса<br>
-            и офлайн магазина:
-          </p>
-          <p class="address-details">
-            ул. Большая Конюшенная 19/8, Санкт-Петербург
-          </p>
-          <p class="phone">
-            Для заказов по телефону:
-          </p>
-          <p class="phone-details">
-            8 812 450-25-25
-          </p>
-          <p class="phone">
-            (с 10 до 20 ежедневно)
-          </p>
-          <a class="feedback" href="#">
-            Форма обратной связи
-          </a>
-        </div>
-      </section>
     </div>
   </main>
+
+  <section class="map">
+    <img src="img/map/map-image.jpg" alt="Изображение карты">
+    <div class="contacts">
+      <p class="address">
+        Адрес главного офиса<br>
+        и офлайн магазина:
+      </p>
+      <p class="address-details">
+        ул. Большая Конюшенная 19/8, Санкт-Петербург
+      </p>
+      <p class="phone">
+        Для заказов по телефону:
+      </p>
+      <p class="phone-details">
+        8 812 450-25-25
+      </p>
+      <p class="phone">
+        (с 10 до 20 ежедневно)
+      </p>
+      <a class="feedback" href="#">
+        Форма обратной связи
+      </a>
+    </div>
+  </section>
 
   <footer class="main-footer clearfix">
     <div class="container">
@@ -214,6 +236,17 @@
       </section>
     </div>
   </footer>
+
+  <form class="feedback">
+    <b class="feedback-title">Мы обязательно вам ответим!</b>
+    <input class="form-text" type="text" name="user-name" placeholder="Как вас зовут?">
+    <input class="form-text" type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
+    <textarea class="feedback-text" name="feedback-text" placeholder="Напишите что-нибудь...">
+    </textarea>
+    <div class="feedback-btn">
+      <input class="form-text" type="submit" name="Отправить">
+    </div>
+  </form>
 
 </body>
 </html>

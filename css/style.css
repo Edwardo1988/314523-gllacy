@@ -1,3 +1,12 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
 html,
 body {
   min-width: 1200px;
@@ -8,6 +17,10 @@ body {
 
 body {
   background-size: 1200px auto;
+}
+
+.page-teal {
+  background: #849d8f url("../img/main-backgrounds/main-background-teal.jpg") no-repeat center top;
 }
 
 
@@ -88,7 +101,7 @@ background-color: red;
 */
 
 .container {
-  width: 1146px;
+  width: 1200px;
   margin: 0 auto;
   padding: 0 27px;
 }
@@ -113,6 +126,7 @@ background-color: red;
 }
 
 .slider {
+  min-height: 495px;
   margin-bottom: 40px;
 }
 
@@ -174,7 +188,8 @@ background-color: red;
 
 .map {
   width: 1200px;
-  float: left;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main-footer {
