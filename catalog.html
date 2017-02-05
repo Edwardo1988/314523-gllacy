@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси-Каталог</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="page-teal-gradient">
   <header class="main-header">
     <div class="container clearfix">
       <div class="logo">
@@ -15,7 +17,7 @@
         </a>
       </div>
       <nav class="main-navigation">
-      <ul class="main-navigation-list">
+      <ul class="main-menu">
           <li>
             <a href="#">Каталог</a>
             <ul class="submenu">
@@ -34,10 +36,10 @@
           </li>
         </ul>
       </nav>
-      <div class="links">
-        <button class="search">Поиск</button>
-        <a class="login" href="">Вход</a>
-        <div class="basket-list">
+      <div class="user-block">
+        <button class="search-form user-block-list">Поиск</button>
+        <a class="login user-block-list" href="">Вход</a>
+        <div class="basket user-block-list">
           <div class="basket-info" href="">2 товара</div>
           <form class="basket-products">
             <div class="basket-item">
@@ -91,8 +93,10 @@
       <form class="filters clearfix" method="post">
         <div class="filter-item"> 
           <select id="sort">
-            <option value="s1">По популярности</option>
-            <option value="s2">По цене</option>
+            <option value="s1">по популярности</option>
+            <option value="s2">сначала недорогие</option>
+            <option value="s3">сначала дорогие</option>
+            <option value="s4">по жирности</option>
           </select>
           <label for="sort"><b class="options">Сортировка:</b></label>
         </div>
@@ -146,64 +150,64 @@
       </form>
 
       <section class="product-items clearfix">
-        <article class="product-teaser">
+        <article class="product-teaser product-teaser-item">
           <img class="product-photo" src="img/products/main/icecream-orange.jpg" alt="Изображение мороженого">
-          <p class="price">310 &#8381;/кг</p>
+          <p class="price">310 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
         </article>
-        <article class="product-teaser">
+        <article class="product-teaser product-teaser-item">
           <img class="product-photo" src="img/products/main/icecream-coffee.jpg" alt="Изображение мороженого">
-          <p class="price">380 &#8381;/кг</p>
+          <p class="price">380 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">Сливочно-кофейное с кусочками шоколада</h3>
         </article>
-        <article class="product-teaser">
+        <article class="product-teaser product-teaser-item">
           <img class="product-photo" src="img/products/main/icecream-strawberry.jpg" alt="Изображение мороженого">
-          <p class="price">355 &#8381;/кг</p>
+          <p class="price">355 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
         </article>
-        <article class="product-teaser">
+        <article class="product-teaser product-teaser-item">
           <img class="product-photo" src="img/products/main/icecream-caramel.jpg" alt="Изображение мороженого">
-          <p class="price">415 &#8381;/кг</p>
+          <p class="price">415 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">Сливочное крем-брюле с карамельной подливкой</h3>
         </article>
-        <article class="product-teaser">
+        <article class="product-teaser product-teaser-item">
           <img class="product-photo" src="img/products/catalog/icecream-cowberry.jpg" alt="Изображение мороженого">
-          <p class="price">325 &#8381;/кг</p>
+          <p class="price">325 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">Сливочное с брусничным джемом</h3>
         </article>
-        <article class="product-teaser">
+        <article class="product-teaser product-teaser-item">
           <img class="product-photo" src="img/products/catalog/icecream-bilberry.jpg" alt="Изображение мороженого">
-          <p class="price">410 &#8381;/кг</p>
+          <p class="price">410 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">Сливочно-черничное с цельными ягодами черники</h3>
         </article>
-        <article class="product-teaser">
+        <article class="product-teaser product-teaser-item">
           <img class="product-photo" src="img/products/catalog/icecream-lemon.jpg" alt="Изображение мороженого">
-          <p class="price">375 &#8381;/кг</p>
+          <p class="price">375 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">Сливочно-лимонное с карамельной присыпкой</h3>
         </article>
-        <article class="product-teaser">
+        <article class="product-teaser product-teaser-item">
           <img class="product-photo" src="img/products/catalog/icecream-chocolate-chips.jpg" alt="Изображение мороженого">
-          <p class="price">320 &#8381;/кг</p>
+          <p class="price">320 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">Сливочное с шоколадной стружкой</h3>
         </article>
-        <article class="product-teaser">
+        <article class="product-teaser product-teaser-item">
           <img class="product-photo" src="img/products/catalog/icecream-chocolate-pieces.jpg" alt="Изображение мороженого">
-          <p class="price">440 &#8381;/кг</p>
+          <p class="price">440 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">Сливочно-ванильное с кусочками шоколада</h3>
         </article>
-        <article class="product-teaser">
+        <article class="product-teaser product-teaser-item">
           <img class="product-photo" src="img/products/catalog/icecream-menthol.jpg" alt="Изображение мороженого">
-          <p class="price">435 &#8381;/кг</p>
+          <p class="price">435 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">Сливочноe с ментоловым сиропом</h3>
         </article>
-        <article class="product-teaser">
+        <article class="product-teaser product-teaser-item">
           <img class="product-photo" src="img/products/catalog/icecream-chocolate-black.jpg" alt="Изображение мороженого">
-          <p class="price">355 &#8381;/кг</p>
+          <p class="price">355 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">Сливочное с кусочками черного шоколада</h3>
         </article>
-        <article class="product-teaser">
+        <article class="product-teaser product-teaser-item">
           <img class="product-photo" src="img/products/catalog/icecream-mint.jpg" alt="Изображение мороженого">
-          <p class="price">420 &#8381;/кг</p>
+          <p class="price">420 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">Сливочное с мятным сиропом</h3>
         </article>
       </section>
@@ -220,15 +224,16 @@
   <footer class="main-footer clearfix">
     <div class="container">
       <section class="footer-social">
-        <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-        <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+        <a class="social-btn social-btn-tw" href="#">Твиттер</a>
         <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+        <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+        <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
       </section>
       <section class="about-company">
-        <a class="for-suppliers" href="#">Для поставщиков</a>
-        <a href="#">Наши документы</a>
-        <a href="#">О производстве</a>
-        <a href="#">Экологические стандарты</a>
+        <a class="for-suppliers about-item" href="#">Для поставщиков</a>
+        <a class="about-item" href="#">Наши документы</a>
+        <a class="about-item" href="#">О производстве</a>
+        <a class="about-item" href="#">Экологические стандарты</a>
       </section>
       <section class="footer-copyright">
         <img src="#" alt="Логотип HTML Academy">

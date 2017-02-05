@@ -3,10 +3,23 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page-teal">
+  <div class="sliders-radio">
+    <input type="radio" name="slider" value="slide-teal" id="slide-teal">
+    <input type="radio" name="slider" value="slide-blue" id="slide-blue" checked>
+    <input type="radio" name="slider" value="slide-chestnut" id="slide-chestnut">
+  </div>
+  <div class="page-background">
+    <div class="page-teal"></div>
+    <div class="page-blue"></div>
+    <div class="page-teal"></div>
+  </div>
+
   <header class="main-header">
     <div class="container clearfix">
       <div class="logo">
@@ -15,7 +28,7 @@
       <nav class="main-navigation">
       <ul class="main-menu">
           <li>
-            <a href="#">Каталог</a>
+            <a href="catalog.html">Каталог</a>
             <ul class="submenu">
               <li class="submenu-item">
                 <a href="#">Новинки</a>
@@ -42,15 +55,15 @@
           </li>
         </ul>
       </nav>
-      <div class="links">
-        <div class="search-form">
-          <button class="search-btn">Поиск</button>
+      <div class="user-block">
+        <div class="search-form user-block-list">
+          <button class="search-btn"></button>
           <div class="search-content">
             <input class="form-text" type="text" placeholder="Что ищем?">
           </div>
         </div>
-        <div class="login">
-          <div class="login-btn" href="">Вход</div>
+        <div class="login user-block-list">
+          <div class="login-btn">Вход</div>
           <div class="login-content">
             <form class="login-form">
               <input class="form-text" type="email" name="email" placeholder="Электронная почта">
@@ -61,26 +74,32 @@
             </form>
           </div>
         </div>
-        <a class="basket" href="">Пусто</a>
+        <a class="basket user-block-list" href="#">Пусто</a>
+
+      </div>
+      <div class="schedule">
+        <p class="schedule-time">С 10 до 20, ежедневно</p>
+        <p class="schedule-phone">8 812 450-25-25</p>
       </div>
     </div>
-    <div class="schedule">С 10 до 20, ежедневно<br>
-      8 812 450-25-25
-    </div>
   </header>
+
 
   <main class="main">
     <div class="container">
       <section class="slider clearfix">
         <div class="slider-content slide-teal">
+          <label for="slide-teal"></label>
           <h2 class="slider-name">Крем-брюле и пломбир с малиновым джемом</h2>
           <a class="btn slider-buy" href="#">Давайте оба!</a>
         </div>
         <div class="slider-content slide-blue">
+          <label for="slide-blue"></label>
           <h2 class="slider-name">Шоколадный пломбир и лимонный сорбет</h2>
           <a class="btn slider-buy" href="#">Давайте оба!</a>
         </div>
         <div class="slider-content slide-chestnut">
+          <label for="slide-chestnut"></label>
           <h2 class="slider-name">Пломбир с помадкой и клубничный щербет</h2>
           <a class="btn slider-buy" href="#">Давайте оба!</a>
         </div>
@@ -88,7 +107,7 @@
 
       <section class="banners clearfix">
         <div class="banner-item">
-          <img src="#" alt="Малинка даром!">
+          <img class="banner-item-jam" src="#" alt="Малинка даром!">
           <h3 class="banner-name">Малинка даром!</h3>
           <p class="banner-description">
             При покупке 2 кг любого фруктового мороженого, 
@@ -97,7 +116,7 @@
           <a class="btn banner-buy" href="">Хочу варенье!</a>
         </div>
         <div class="banner-item">
-          <img src="#" alt="Шоколадки даром!">
+          <img class="banner-item-chocolate" src="#" alt="Шоколадки даром!">
           <h3 class="banner-name">Шоколадки даром!</h3>
           <p class="banner-description">
             При покупке 2 кг пломбира, добавим в ваш заказ 
@@ -110,28 +129,28 @@
       <section class="product-items clearfix">
         <article class="product-teaser product-teaser-hit">
           <img class="product-photo" src="img/products/main/icecream-orange.jpg" alt="Изображение мороженого">
-          <p class="price">310 &#8381;/кг</p>
+          <p class="price">310 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
             Сливочное с апельсиновым джемом и цитрусовой стружкой
           </h3>
         </article>
         <article class="product-teaser product-teaser-hit">
           <img class="product-photo" src="img/products/main/icecream-coffee.jpg" alt="Изображение мороженого">
-          <p class="price">380 &#8381;/кг</p>
+          <p class="price">380 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
             Сливочно-кофейное с кусочками шоколада
           </h3>
         </article>
         <article class="product-teaser product-teaser-hit">
           <img class="product-photo" src="img/products/main/icecream-strawberry.jpg" alt="Изображение мороженого">
-          <p class="price">355 &#8381;/кг</p>
+          <p class="price">355 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
             Сливочно-клубничное с присыпкой из белого шоколада
           </h3>
         </article>
         <article class="product-teaser product-teaser-hit">
           <img class="product-photo" src="img/products/main/icecream-caramel.jpg" alt="Изображение мороженого">
-          <p class="price">415 &#8381;/кг</p>
+          <p class="price">415 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
             Сливочное крем-брюле с карамельной подливкой
           </h3>
@@ -220,15 +239,16 @@
   <footer class="main-footer clearfix">
     <div class="container">
       <section class="footer-social">
-        <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
-        <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+        <a class="social-btn social-btn-tw" href="#">Твиттер</a>
         <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
+        <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
+        <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
       </section>
       <section class="about-company">
-        <a class="for-suppliers" href="#">Для поставщиков</a>
-        <a href="#">Наши документы</a>
-        <a href="#">О производстве</a>
-        <a href="#">Экологические стандарты</a>
+        <a class="for-suppliers about-item" href="#">Для поставщиков</a>
+        <a class="about-item" href="#">Наши документы</a>
+        <a class="about-item" href="#">О производстве</a>
+        <a class="about-item" href="#">Экологические стандарты</a>
       </section>
       <section class="footer-copyright">
         <img src="#" alt="Логотип HTML Academy">
