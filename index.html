@@ -155,29 +155,29 @@
         </article>
       </section>
 
-      <section class="company-description clearfix">
-        <h4 class="company-main">
+      <section class="company-seo clearfix">
+        <h4 class="company-seo-main">
           Магазин Глейси — это онлайн и офлайн магазин по
           продаже мороженого собственного производства на развес
         </h4>
         <div class="company-details">
-          <p class="company-description-item">
+          <p class="company-seo-tech seo-item">
             Все наше мороженое изготавливается на собственном
             производстве, с использованием современного
             оборудования и проверенных временем технологий.
           </p>
-          <p class="company-description-item">
-            Закупка ингредиентов  производится только у
+          <p class="company-seo-purchase seo-item">
+            Закупка ингредиентов производится только у
             проверенных фермерских хозяйств и компаний, с
             которыми нас связывает долговременное сотрудничество.
           </p>
-          <p class="company-description-item">
+          <p class="company-seo-quality seo-item">
             Для приготовления мороженого используются настоящие
             сливки и молоко высочайшего качества.
             Все дополнительные ингредиенты и добавки произведены
             из натурального, экологически чистого сырья.
            </p>
-          <p class="company-description-item">
+          <p class="company-seo-delivery seo-item">
             Доставка нашего мороженого до заказчиков
             осуществляется в специальном термопаке, который
             не дает мороженому растаять в пути и позволяет
@@ -188,22 +188,26 @@
 
       <section class="news-updates clearfix">
         <article class="blog">
-          <img src="img/banners/strawberry-banner-background.jpg" alt="Изображение анонса блога">
-          <p class="blog-new">Новое в нашем блоге</p>
-          <p class="blog-post-name">
-          10 способов сервировки фруктовых щербетов к столу
-          </p>
+          <img class="blog-photo" src="img/banners/strawberry-banner-background.jpg" alt="Изображение анонса блога">
+          <div class="blog-new">Новое в нашем блоге</div>
+          <a href="#" class="blog-post-name">
+            10 способов сервировки<br> фруктовых щербетов к<br> столу
+          </a>
         </article>
-        <form class="email" method="post">
-          <p class="email-description">
-            Подпишитесь на нашу сладкую рассылку и будете
-            всегда в курсе всего самого вкусного, что у
-            нас происходит. Обещаем не спамить и не слать
-            всякой ненужной ерунды. Честно =)
-          </p>
-          <input class="form-text" type="email" name="email" placeholder="Электронная почта">
-          <input class="form-text" type="submit" name="Отправить">
-        </form>
+        <article class="email">
+          <form class="email-bg" method="post">
+            <p class="email-description">
+              Подпишитесь на нашу сладкую рассылку и будете
+              всегда в курсе всего самого вкусного, что у
+              нас происходит. Обещаем не спамить и не слать
+              всякой ненужной ерунды. Честно =)
+            </p>
+            <div class="form-text">
+              <input class="input-text" type="email" name="email" placeholder="Электронная почта">
+              <input class="btn form-btn" type="submit" name="Отправить">
+            </div>
+          </form>
+        </article>
       </section>
 
     </div>
@@ -211,24 +215,24 @@
 
   <section class="map">
     <img src="img/map/map-image.jpg" alt="Изображение карты">
+    <div class="map-pin">
+    </div>
     <div class="contacts">
-      <p class="address">
+      <p class="contacts-text">
         Адрес главного офиса<br>
-        и офлайн магазина:
-      </p>
-      <p class="address-details">
+        и офлайн магазина:<br>
+      <span class="address-text">
         ул. Большая Конюшенная 19/8, Санкт-Петербург
+      </span>
       </p>
-      <p class="phone">
-        Для заказов по телефону:
-      </p>
-      <p class="phone-details">
+      <p class="contacts-text">
+        Для заказов по телефону:<br>
+      <span class="phone-text">
         8 812 450-25-25
-      </p>
-      <p class="phone">
+      </span><br>
         (с 10 до 20 ежедневно)
       </p>
-      <a class="feedback" href="#">
+      <a class="btn feedback" href="#">
         Форма обратной связи
       </a>
     </div>
@@ -237,20 +241,25 @@
   <footer class="main-footer clearfix">
     <div class="container">
       <section class="footer-social">
-        <a class="social-btn social-btn-tw" href="#">Твиттер</a>
-        <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
-        <a class="social-btn social-btn-fb" href="#">Фейсбук</a>
-        <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
+        <a class="social-btn social-btn-tw" href="#"></a>
+        <a class="social-btn social-btn-inst" href="#"></a>
+        <a class="social-btn social-btn-fb" href="#"></a>
+        <a class="social-btn social-btn-vk" href="#"></a>
       </section>
       <section class="about-company">
-        <a class="for-suppliers about-item" href="#">Для поставщиков</a>
-        <a class="about-item" href="#">Наши документы</a>
-        <a class="about-item" href="#">О производстве</a>
-        <a class="about-item" href="#">Экологические стандарты</a>
+        <div class="about-double-block">
+          <div class="for-suppliers"></div>
+          <a class="about-item" href="#">Для поставщиков</a>
+          <a class="about-item" href="#">О производстве</a>
+        </div>
+        <div class="about-double-block">
+          <a class="about-item" href="#">Наши документы</a>
+          <a class="about-item" href="#">Экологические стандарты</a>
+        </div>
       </section>
       <section class="footer-copyright">
-        <img src="#" alt="Логотип HTML Academy">
-        <p>Сделано в HTML Academy © 2017</p>
+        <div class="academy-logo"></div>
+        <div class="footer-copyright-text">Сделано в <a class="academy-link" href="">HTML Academy</a> © 2017</div>
       </section>
     </div>
   </footer>
