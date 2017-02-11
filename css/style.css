@@ -319,7 +319,8 @@ body {
 
 .user-block-list:last-child {
   margin-right: 0;
-  width: 119px;
+  width: 117px;
+  padding-right: 14px;
 }
 
 .user-block a {
