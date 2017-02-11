@@ -18,14 +18,24 @@
       </div>
       <nav class="main-navigation">
       <ul class="main-menu">
-          <li>
+          <li class="main-menu-catalogue">
             <a href="#">Каталог</a>
             <ul class="submenu">
-              <li class="submenu-item">Новинки</li>
-              <li class="submenu-item">Сливочное</li>
-              <li class="submenu-item">Щербеты</li>
-              <li class="submenu-item">Фруктовый лед</li>
-              <li class="submenu-item">Мелорин</li>
+              <li class="submenu-item submenu-title">
+                <a href="#">Новинки</a>
+              </li>
+              <li class="submenu-item submenu-list">
+                <a class="submenu-opened" href="catalog.html">Сливочное</a>
+              </li>
+              <li class="submenu-item submenu-list">
+                <a href="#">Щербеты</a>
+              </li>
+              <li class="submenu-item submenu-list">
+                <a href="#">Фруктовый лед</a>
+              </li>
+              <li class="submenu-item submenu-list">
+                <a href="#">Мелорин</a>
+              </li>
             </ul>
           </li>
           <li>
@@ -37,10 +47,25 @@
         </ul>
       </nav>
       <div class="user-block">
-        <button class="search-form user-block-list">Поиск</button>
-        <a class="login user-block-list" href="">Вход</a>
-        <div class="basket user-block-list">
-          <div class="basket-info" href="">2 товара</div>
+        <div class="search-form user-block-list">
+          <button class="search-btn"></button>
+          <div class="search-content">
+            <input class="form-text" type="text" placeholder="Что ищем?">
+          </div>
+        </div>
+        <div class="login user-block-list">
+          <div class="login-btn">Вход</div>
+          <div class="login-content">
+            <form class="login-form">
+              <input class="form-text" type="email" name="email" placeholder="Электронная почта">
+              <input class="form-text" type="password" name="password" placeholder="Пароль">
+              <a class="btn btn-login" href="#">Войти</a>
+              <a class="login-link" href="#">Забыли пароль</a>
+              <a class="login-link" href="#">Новая регистрация</a>
+            </form>
+          </div>
+        </div>
+        <div class="basket-full user-block-list">2 товара
           <form class="basket-products">
             <div class="basket-item">
               <p class="basket-item-title">Пломбир с апельсиновым джемом</p>
@@ -64,9 +89,10 @@
           </form>
         </div>
       </div>
-    </div>
-    <div class="schedule">С 10 до 20, ежедневно<br>
-      8 812 450-25-25
+      <div class="schedule">
+        <p class="schedule-time">С 10 до 20, ежедневно</p>
+        <p class="schedule-phone">8 812 450-25-25</p>
+      </div>
     </div>
   </header>
   
@@ -230,14 +256,19 @@
         <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
       </section>
       <section class="about-company">
-        <a class="for-suppliers about-item" href="#">Для поставщиков</a>
-        <a class="about-item" href="#">Наши документы</a>
-        <a class="about-item" href="#">О производстве</a>
-        <a class="about-item" href="#">Экологические стандарты</a>
+        <div class="about-double-block">
+          <div class="for-suppliers"></div>
+          <a class="about-item" href="#">Для поставщиков</a>
+          <a class="about-item" href="#">О производстве</a>
+        </div>
+        <div class="about-double-block">
+          <a class="about-item" href="#">Наши документы</a>
+          <a class="about-item" href="#">Экологические стандарты</a>
+        </div>
       </section>
       <section class="footer-copyright">
-        <img src="#" alt="Логотип HTML Academy">
-        <p>Сделано в HTML Academy © 2017</p>
+        <div class="academy-logo"></div>
+        <div class="footer-copyright-text">Сделано в <a class="academy-link" href="">HTML Academy</a> © 2017</div>
       </section>
     </div>
   </footer>
