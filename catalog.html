@@ -99,7 +99,7 @@
       <section class="breadcrumbs">
         <ul class="breadcrumbs-list">
           <li class="breadcrumbs-list-main">
-            <a href="#">Главная</a>
+            <a href="index.html">Главная</a>
           </li>
           <li class="breadcrumbs-list-main">
             <a href="#">Каталог</a>
@@ -117,67 +117,75 @@
   <main class="main">
     <div class="container clearfix">
       
-      <div class="page-title clearfix">
-        <h1 class="page-title-text">Сливочное мороженое</h1>
+      <div class="catalogue-title clearfix">
+        <h1 class="catalogue-title-text">Сливочное мороженое</h1>
       </div>
 
       <form class="filters clearfix" method="post">
         <div class="filter-item"> 
-          <select id="sort">
-            <option value="s1">по популярности</option>
-            <option value="s2">сначала недорогие</option>
-            <option value="s3">сначала дорогие</option>
-            <option value="s4">по жирности</option>
-          </select>
           <label for="sort"><b class="options">Сортировка:</b></label>
+          <div class="filter-bg">
+            <select class="sort" id="sort">
+              <option value="s1">по популярности</option>
+              <option value="s2">сначала недорогие</option>
+              <option value="s3">сначала дорогие</option>
+              <option value="s4">по жирности</option>
+            </select>
+          </div>
         </div>
         <div class="filter-item">
-          <b class="options">Цена: 100 руб. - 500 руб.</b>
-          <input type="range" name="range" id="range" min="100" max="500">
+          <b class="options">Цена: 100 руб. – 500 руб.</b>
+          <div class="filter-bg">
+            <input type="range" name="range" id="range" min="100" max="500">
+          </div>
         </div> 
         <div class="filter-item"> 
           <b class="options">Жирность:</b>
-          <div class="fatness">
-            <input type="radio" name="fatness" id="empty" value="f1">
-            <label for="empty">0%</label>
-          </div>
-          <div class="fatness">
-            <input type="radio" name="fatness" id="minimum" value="f2" checked>
-            <label for="minimum">до 10%</label>
-          </div>
-          <div class="fatness">
-            <input type="radio" name="fatness" id="medium" value="f3">
-            <label for="medium">до 30%</label>
-          </div>
-          <div class="fatness">
-            <input type="radio" name="fatness" id="maximim" value="f4">
-            <label for="maximim">Выше 30%</label>
+          <div class="filter-bg">
+            <div class="fatness">
+              <input type="radio" name="fatness" id="empty" value="f1">
+              <label for="empty">0%</label>
+            </div>
+            <div class="fatness">
+              <input type="radio" name="fatness" id="minimum" value="f2" checked>
+              <label for="minimum">до 10%</label>
+            </div>
+            <div class="fatness">
+              <input type="radio" name="fatness" id="medium" value="f3">
+              <label for="medium">до 30%</label>
+            </div>
+            <div class="fatness">
+              <input type="radio" name="fatness" id="maximim" value="f4">
+              <label for="maximim">выше 30%</label>
+            </div>
           </div>
         </div>
         <div class="filter-item"> 
           <b class="options">Наполнители:</b>
-          <div class="builder">
-            <input type="checkbox" name="option1" id="chocolate" value="b1" checked>
-            <label for="chocolate">шоколадные</label>
-          </div>
-          <div class="builder">
-            <input type="checkbox" name="option2" id="sugar" value="b2" checked>
-            <label for="sugar">сахарные присыпки</label>
-          </div>
-          <div class="builder">
-            <input type="checkbox" name="option3" id="fruits" value="b3">
-            <label for="fruits">фрукты</label>
-          </div>
-          <div class="builder">
-            <input type="checkbox" name="option4" id="syrups" value="b4">
-            <label for="syrups">сиропы</label>
-          </div>
-          <div class="builder">
-            <input type="checkbox" name="option5" id="jams" value="b5">
-            <label for="jams">джемы</label>
+          <div class="filter-bg">
+            <div class="builder">
+              <input type="checkbox" name="option1" id="chocolate" value="b1" checked>
+              <label for="chocolate">шоколадные</label>
+            </div>
+            <div class="builder">
+              <input type="checkbox" name="option2" id="sugar" value="b2" checked>
+              <label for="sugar">сахарные присыпки</label>
+            </div>
+            <div class="builder">
+              <input type="checkbox" name="option3" id="fruits" value="b3">
+              <label for="fruits">фрукты</label>
+            </div>
+            <div class="builder">
+              <input type="checkbox" name="option4" id="syrups" value="b4">
+              <label for="syrups">сиропы</label>
+            </div>
+            <div class="builder">
+              <input type="checkbox" name="option5" id="jams" value="b5">
+              <label for="jams">джемы</label>
+            </div>
           </div>
         </div>
-        <input type="submit" name="Применить" value="Применить">
+        <input class="filters-btn" type="submit" name="Применить" value="Применить">
       </form>
 
       <section class="product-items clearfix">
