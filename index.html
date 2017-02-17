@@ -64,19 +64,27 @@
       <div class="user-block">
         <div class="search">
           <button class="search-btn"></button>
-          <div class="search-content">
-            <input class="form-text" type="text" placeholder="Что ищем?">
-          </div>
+          <form class="search-content" method="post">
+            <input class="form-text search-form" type="text" id="search-form" name="search-form" placeholder="Что ищем?" required>
+            <label class="form-label search-label" for="search-form">Что ищем?</label>
+          </form>
         </div>
         <div class="login">
           <div class="login-btn">Вход</div>
           <div class="login-content">
-            <form class="login-form">
-              <input class="form-text" type="email" name="email" placeholder="Электронная почта">
-              <input class="form-text" type="password" name="password" placeholder="Пароль">
-              <a class="btn btn-login" href="#">Войти</a>
-              <a class="login-link" href="#">Забыли пароль</a>
-              <a class="login-link" href="#">Новая регистрация</a>
+            <form class="login-form" method="post">
+
+              <input class="form-text login-form-email" id="email" type="email" name="email" placeholder="Электронная почта" required>
+              <label class="form-label email-label" for="email">Электронная почта</label>
+
+              <input class="form-text login-form-email" id="password" type="password" name="password" placeholder="Пароль" required>
+              <label class="form-label login-password-label" for="password">Пароль</label>
+
+              <a class="btn login-form-btn" href="#">Войти</a>
+              <div class="login-link">
+                <a href="#">Забыли пароль</a>
+                <a href="#">Новая регистрация</a>
+              </div>
             </form>
           </div>
         </div>
@@ -128,9 +136,9 @@
           <img class="product-photo" src="img/products/main/icecream-orange.jpg" alt="Изображение мороженого">
           <p class="price">310 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <span class="product-title-underline">
+            <a class="product-title-underline">
               Сливочное с апельсиновым джемом и цитрусовой стружкой
-            </span>
+            </a>
           </h3>
           <a class="btn product-view" href="#">Быстрый просмотр</a>
         </article>
@@ -138,9 +146,9 @@
           <img class="product-photo" src="img/products/main/icecream-coffee.jpg" alt="Изображение мороженого">
           <p class="price">380 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <span class="product-title-underline">
+            <a class="product-title-underline">
               Сливочно-кофейное с кусочками шоколада
-            </span>
+            </a>
           </h3>
           <a class="btn product-view" href="#">Быстрый просмотр</a>
         </article>
@@ -148,9 +156,9 @@
           <img class="product-photo" src="img/products/main/icecream-strawberry.jpg" alt="Изображение мороженого">
           <p class="price">355 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <span class="product-title-underline">
+            <a class="product-title-underline">
               Сливочно-клубничное с присыпкой из белого шоколада
-            </span>
+            </a>
           </h3>
           <a class="btn product-view" href="#">Быстрый просмотр</a>
         </article>
@@ -158,9 +166,9 @@
           <img class="product-photo" src="img/products/main/icecream-caramel.jpg" alt="Изображение мороженого">
           <p class="price">415 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <span class="product-title-underline">
+            <a class="product-title-underline">
               Сливочное крем-брюле с карамельной подливкой
-            </span>
+            </a>
           </h3>
           <a class="btn product-view" href="#">Быстрый просмотр</a>
         </article>
@@ -214,7 +222,10 @@
               всякой ненужной ерунды. Честно =)
             </p>
             <div class="form-email">
-              <input class="input-text form-text" type="email" name="email" placeholder="Электронная почта">
+              
+              <input class="input-text form-text" id="news-email" type="email" name="email" placeholder="Электронная почта" required>
+              <label class="form-label input-text-label" for="news-email">Электронная почта</label>
+
               <input class="btn form-btn" type="submit" name="Отправить">
             </div>
           </form>
@@ -275,16 +286,22 @@
     </div>
   </footer>
 
-  <form class="feedback">
-    <b class="feedback-title">Мы обязательно вам ответим!</b>
-    <input class="form-text" type="text" name="user-name" placeholder="Как вас зовут?">
-    <input class="form-text" type="email" name="feedback-email" placeholder="Ваша почта для ответа?">
-    <textarea class="feedback-text" name="feedback-text" placeholder="Напишите что-нибудь...">
-    </textarea>
-    <div class="feedback-btn">
-      <input class="form-text" type="submit" name="Отправить">
-    </div>
-  </form>
+  <div class="feedback-pop-up">
+    <form class="feedback-form" method="post">
+      <b class="feedback-title">Мы обязательно вам ответим!</b>
+
+      <input class="form-text feedback-form-text" id="feedback-user-name" type="text" name="user-name" placeholder="Как вас зовут?" required>
+      <label class="form-label feedback-name-label" for="feedback-user-name">Как вас зовут?</label>
+
+      <input class="form-text feedback-form-text" id="feedback-email" type="email" name="feedback-email" placeholder="Ваша почта для ответа?" required>
+      <label class="form-label feedback-email-label" for="feedback-email">Ваша почта для ответа?</label>
+
+      <textarea class="form-text feedback-text" id="feedback-text" name="feedback-text" placeholder="Напишите что-нибудь..." required></textarea>
+      <label class="form-label feedback-text-label" for="feedback-text">Напишите что-нибудь...</label>
+
+      <input class="btn feedback-btn" type="submit" name="Отправить">
+    </form>
+  </div>
 
 </body>
 </html>

@@ -327,6 +327,8 @@ body {
   vertical-align: top;
 
   padding: 7px 8px 4px;
+
+  position: relative;
 }
 
 .login {
@@ -360,6 +362,7 @@ body {
   font-size: 14px;
   line-height: 16px;
   vertical-align: top;
+  position: relative;
 }
 
 .user-block a {
@@ -380,6 +383,10 @@ body {
 
 /* search-btn and form*/
 
+.search {
+  position: relative;
+}
+
 .search-btn {
   outline: none;
   border: 0;
@@ -392,7 +399,6 @@ body {
   content: "";
   background: url("../img/icons-sprite.png") no-repeat -32px -262px;
   float: left;
-  position: relative;
   top: 0;
   left: 0;
   height: 17px;
@@ -404,16 +410,54 @@ body {
   cursor: pointer;
 }
 
+.search-content::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: -15px;
+  left: 15px;
+  padding-bottom: 15px;
+}
+
 .search-content {
   display: none;
+  position: absolute;
+  width: 341px;
+  min-height: 84px;
+  left: -308px;
+  top: 36px;
+  padding: 5px 15px 20px;
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 .search:hover .search-content {
   display: block;
+}
+
+.search-form {
+  width: 311px;
+  min-height: 44px;
+
+  font-size: 14px;
+  line-height: 24px;
+  color: #999;
+  border: 1px solid #d3d3d2;
+}
+
+.search-label {
   position: absolute;
+  top: 5px;
+  left: 38px;
 }
 
 /* login-btn and form*/
+
+.login {
+  position: relative;
+}
 
 .login-btn::before {
   content: "";
@@ -431,13 +475,76 @@ body {
   cursor: pointer;
 }
 
+.login-content::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: -15px;
+  left: 15px;
+  padding-bottom: 15px;
+}
+
 .login-content {
   display: none;
+  position: absolute;
+
+  width: 277px;
+  min-height: 214px;
+  left: -183px;
+  top: 36px;
+  padding: 5px 15px 20px 20px;
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 .login:hover .login-content {
   display: block;
+}
+
+.login-form-email {
+  width: 241px;
+  min-height: 44px;
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 24px;
+  color: #999;
+  border: 1px solid #d3d3d2;
+}
+
+.login-form-btn {
+  float: left;
+  padding: 10px 25px;
+  margin-right: 21px;
+
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.login-link a {
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #323232;
+  text-decoration: underline;
+}
+
+.login-link a:hover {
+  cursor: pointer;
+}
+
+.email-label {
   position: absolute;
+  top: 5px;
+  left: 38px;
+}
+
+.login-password-label {
+  position: absolute;
+  top: 71px;
+  left: 38px;
 }
 
 /* basket and basket-products*/
@@ -464,13 +571,111 @@ body {
   width: 21px;
 }
 
+.basket-products::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: -15px;
+  left: 15px;
+  padding-bottom: 15px;
+}
+
 .basket-products {
   display: none;
+  width: 540px;
+  min-height: 245px;
+  padding: 5px 15px 20px;
+  background-color: #f8f7f4;
+  position: absolute;
+  left: -423px;
+  top: 36px;
+  border-radius: 5px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 .basket-full:hover .basket-products {
   display: block;
-  position: absolute;
+}
+
+.basket-items {
+  border-bottom: 1px solid #cacac7;
+  margin-bottom: 17px;
+}
+
+.basket-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: flex-start;
+  height: 35px;
+  margin-bottom: 20px;
+}
+
+.basket-item-photo::before {
+  content: "";
+  display: inline-block;
+  background: url("../img/icons-sprite.png") no-repeat -33px -209px;
+  width: 11px;
+  height: 11px;
+  align-self: center;
+  margin-right: 16px;
+}
+
+.basket-item-photo {
+  display: flex;
+  height: 33px;
+}
+
+.basket-item-title {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+  width: 216px;
+  align-self: center;
+}
+
+.basket-item-mass {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+  align-self: center;
+}
+
+.basket-mass-price {
+  color: #999;
+}
+
+.basket-item-price {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+  align-self: center;
+}
+
+.basket-final-price {
+  float: right;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #323232;
+  margin-bottom: 18px;
+}
+
+.basket-form-clear {
+  clear: both;
+}
+
+.basket-submit-btn {
+  float: right;
+  font-size: 18px;
+  line-height: 24px;
+  border: none;
+  padding: 12px 15px;
 }
 
 /* schedule block */
@@ -853,7 +1058,6 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-family: "Roboto", "Arial", sans-serif;
-  padding-left: 15px;
 }
 
 .form-btn {
@@ -863,6 +1067,12 @@ body {
   font-weight: 700;
   width: 129px;
   height: 43px;
+}
+
+.input-text-label {
+  position: absolute;
+  top: 125px;
+  left: 38px;
 }
 
 /* map-block */
@@ -1137,8 +1347,63 @@ body {
 }
 
 .sort {
-  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: rgba(255, 255, 255, 0);
   border: none;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #fff;
+  margin: 5px -3px 1px -1px;;
+}
+
+.sort::after {
+  content: "";
+  display: inline-block;
+  border: 5px solid transparent;
+  border-top: 5px solid #fff;
+}
+
+.filter-price {
+  width: 189px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  margin: 12px -3px 8px -1px;
+  outline: none;
+}
+
+.filter-price-line {
+  width: 90px;
+  height: 4px;
+  background-color: #f8f7f4;
+  position: absolute;
+  left: 34px;
+}
+
+.filter-price-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #f8f7f4;
+  position: absolute;
+  top: -8px;
+}
+
+.filter-price-min {
+  left: 19px;
+}
+
+.filter-price-max {
+  left: 117px;
+}
+
+.filter-price-circle:hover {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
 }
 
 .fatness {
@@ -1350,24 +1615,133 @@ body {
 /* form-text */
 .form-text {
   border-radius: 5px;
-  border: 1px solid #c7c6c5;
-  color: #c7c6c5;
+  border: 1px solid #d3d3d2;
+  padding: 10px 15px;
+}
+
+.form-label {
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 400;
+  color: #5b9ddf;
+
+  display: none;
 }
 
 .form-text:hover {
   cursor: pointer;
   border: 2px solid #c7c6c5;
+  padding: 9px 14px;
 }
 
-.form-text:focus::-webkit-input-placeholder,
-.form-text:focus::-moz-placeholder,
-.form-text:focus:-moz-placeholder,
-.form-text:focus:-ms-input-placeholder {
-  color: transparent;
+.form-text:focus {
+  border: 2px solid #8fbdec;
+  padding: 9px 14px;
+  outline: none;
+}
+
+.form-text:focus::-webkit-input-placeholder {
+   color: transparent;
+}
+
+.form-text:focus::-moz-placeholder {
+   color: transparent;
+}
+
+.form-text:focus::-ms-input-placeholder {
+   color: transparent;
+}
+
+.form-text:focus + .form-label {
+  display: block;
+}
+
+.form-text:valid {
+  color: #323232;
+  font-weight: 700;
+  border: 1px solid #d3d3d2;
+  padding: 10px 15px;
+  outline: none;
+}
+
+.form-text:valid + .form-label {
+  display: block;
+  color: #999;
 }
 
 /* feedback-pop-up */
 
-.feedback {
+.feedback-pop-up {
   display: none;
+  width: 100%;
+  height: 2000px;
+  background-color: rgba(0,0,0,0.3);
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+}
+
+.feedback-form {
+  margin: 200px auto 0;
+  width: 480px;
+  min-height: 446px;
+  padding: 22px 26px 26px;
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #000;
+  position: relative;
+}
+
+.feedback-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #323232;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.feedback-form-text {
+  width: 266px;
+  min-height: 45px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.feedback-text {
+  width: 426px;
+  min-height: 154px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.feedback-btn {
+  float: right;
+  padding: 9px 24px 12px;
+  border: none;
+
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.feedback-name-label {
+  position: absolute;
+  top: 55px;
+  left: 38px;
+}
+
+.feedback-email-label {
+  position: absolute;
+  top: 120px;
+  left: 38px;
+}
+
+.feedback-text-label {
+  position: absolute;
+  top: 185px;
+  left: 38px;
 }

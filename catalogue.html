@@ -50,43 +50,59 @@
       <div class="user-block">
         <div class="search">
           <button class="search-btn"></button>
-          <div class="search-content">
-            <input class="form-text" type="text" placeholder="Что ищем?">
-          </div>
+          <form class="search-content" method="post">
+            <input class="form-text search-form" type="text" id="search-form" name="search-form" placeholder="Что ищем?" required>
+            <label class="form-label search-label" for="search-form">Что ищем?</label>
+          </form>
         </div>
         <div class="login">
           <div class="login-btn">Вход</div>
           <div class="login-content">
-            <form class="login-form">
-              <input class="form-text" type="email" name="email" placeholder="Электронная почта">
-              <input class="form-text" type="password" name="password" placeholder="Пароль">
-              <a class="btn btn-login" href="#">Войти</a>
-              <a class="login-link" href="#">Забыли пароль</a>
-              <a class="login-link" href="#">Новая регистрация</a>
+            <form class="login-form" method="post">
+
+              <input class="form-text login-form-email" id="email" type="email" name="email" placeholder="Электронная почта" required>
+              <label class="form-label email-label" for="email">Электронная почта</label>
+
+              <input class="form-text login-form-email" id="password" type="password" name="password" placeholder="Пароль">
+              <label class="form-label login-password-label" for="password">Пароль</label>
+
+              <a class="btn login-form-btn" href="#">Войти</a>
+              <div class="login-link">
+                <a href="#">Забыли пароль</a>
+                <a href="#">Новая регистрация</a>
+              </div>
             </form>
           </div>
         </div>
         <div class="basket-full">2 товара
-          <form class="basket-products">
-            <div class="basket-item">
-              <p class="basket-item-title">Пломбир с апельсиновым джемом</p>
-              <p class="basket-item-mass">1,5 кг х
-                <span class="mass-price">200 руб.</span>
-              </p>
-              <p class="basket-item-price">300 руб.</p>
+          <form class="basket-products" method="post">
+            <div class="basket-items">
+              <div class="basket-item">
+                <div class="basket-item-photo">
+                  <img src="img/products/catalog/basket/ice-cream-basket-orange.png" alt="Изображение мороженого">
+                </div>
+                <div class="basket-item-title">Пломбир с апельсиновым джемом</div>
+                <div class="basket-item-mass">1,5 кг х
+                  <span class="basket-mass-price">200 руб.</span>
+                </div>
+                <div class="basket-item-price">300 руб.</div>
+              </div>
+              <div class="basket-item">
+                <div class="basket-item-photo">
+                  <img src="img/products/catalog/basket/ice-cream-basket-white-choco.png" alt="Изображение мороженого">
+                </div>
+                <div class="basket-item-title">Клубничный пломбир с присыпкой из белого шоколада</div>
+                <div class="basket-item-mass">1,5 кг х
+                  <span class="basket-mass-price">300 руб.</span>
+                </div>
+                <div class="basket-item-price">450 руб.</div>
+              </div>
             </div>
-            <div class="basket-item">
-              <p class="basket-item-title">Клубничный пломбир с присыпкой из белого шоколада</p>
-              <p class="basket-item-mass">1,5 кг х
-                <span class="mass-price">300 руб.</span>
-              </p>
-              <p class="basket-item-price">450 руб.</p>
-            </div>
-            <hr class="basket-line">
             <div class="basket-final-price">
               <b>Итого: 750 руб.</b>
             </div>
-            <input type="submit" name="Оформить заказ">
+            <div class="basket-form-clear"></div>
+            <input class="btn basket-submit-btn" type="submit" value="Оформить заказ">
           </form>
         </div>
       </div>
@@ -136,7 +152,11 @@
         <div class="filter-item">
           <b class="options">Цена: 100 руб. – 500 руб.</b>
           <div class="filter-bg">
-            <input type="range" name="range" id="range" min="100" max="500">
+            <div class="filter-price">
+              <div class="filter-price-line"></div>
+              <div class="filter-price-min filter-price-circle"></div>
+              <div class="filter-price-max filter-price-circle"></div>
+            </div>
           </div>
         </div> 
         <div class="filter-item"> 
@@ -193,9 +213,9 @@
           <img class="product-photo" src="img/products/main/icecream-orange.jpg" alt="Изображение мороженого">
           <p class="price">310 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <span class="product-title-underline">
+            <a class="product-title-underline">
               Сливочное с апельсиновым джемом и цитрусовой стружкой
-            </span>
+            </a>
           </h3>
           <a class="btn product-view" href="#">Быстрый просмотр</a>
         </article>
@@ -203,9 +223,9 @@
           <img class="product-photo" src="img/products/main/icecream-coffee.jpg" alt="Изображение мороженого">
           <p class="price">380 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <span class="product-title-underline">
+            <a class="product-title-underline">
               Сливочно-кофейное с кусочками шоколада
-            </span>
+            </a>
           </h3>
           <a class="btn product-view" href="#">Быстрый просмотр</a>
         </article>
@@ -213,9 +233,9 @@
           <img class="product-photo" src="img/products/main/icecream-strawberry.jpg" alt="Изображение мороженого">
           <p class="price">355 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <span class="product-title-underline">
+            <a class="product-title-underline">
               Сливочно-клубничное с присыпкой из белого шоколада
-            </span>
+            </a>
           </h3>
           <a class="btn product-view" href="#">Быстрый просмотр</a>
         </article>
@@ -223,9 +243,9 @@
           <img class="product-photo" src="img/products/main/icecream-caramel.jpg" alt="Изображение мороженого">
           <p class="price">415 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <span class="product-title-underline">
+            <a class="product-title-underline">
               Сливочное крем-брюле с карамельной подливкой
-            </span>
+            </a>
           </h3>
           <a class="btn product-view" href="#">Быстрый просмотр</a>
         </article>
@@ -233,9 +253,9 @@
           <img class="product-photo" src="img/products/catalog/icecream-cowberry.jpg" alt="Изображение мороженого">
           <p class="price">325 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <span class="product-title-underline">
+            <a class="product-title-underline">
               Сливочное с брусничным джемом
-            </span>
+            </a>
           </h3>
           <a class="btn product-view" href="#">Быстрый просмотр</a>
         </article>
@@ -243,9 +263,9 @@
           <img class="product-photo" src="img/products/catalog/icecream-bilberry.jpg" alt="Изображение мороженого">
           <p class="price">410 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <span class="product-title-underline">
+            <a class="product-title-underline">
               Сливочно-черничное с цельными ягодами черники
-            </span>
+            </a>
           </h3>
           <a class="btn product-view" href="#">Быстрый просмотр</a>
         </article>
@@ -253,9 +273,9 @@
           <img class="product-photo" src="img/products/catalog/icecream-lemon.jpg" alt="Изображение мороженого">
           <p class="price">375 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <span class="product-title-underline">
+            <a class="product-title-underline">
               Сливочно-лимонное с карамельной присыпкой
-            </span>
+            </a>
           </h3>
           <a class="btn product-view" href="#">Быстрый просмотр</a>
         </article>
@@ -263,9 +283,9 @@
           <img class="product-photo" src="img/products/catalog/icecream-chocolate-chips.jpg" alt="Изображение мороженого">
           <p class="price">320 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <span class="product-title-underline">
+            <a class="product-title-underline">
               Сливочное с шоколадной стружкой
-            </span>
+            </a>
           </h3>
           <a class="btn product-view" href="#">Быстрый просмотр</a>
         </article>
@@ -273,9 +293,9 @@
           <img class="product-photo" src="img/products/catalog/icecream-chocolate-pieces.jpg" alt="Изображение мороженого">
           <p class="price">440 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <span class="product-title-underline">
+            <a class="product-title-underline">
               Сливочно-ванильное с кусочками шоколада
-            </span>
+            </a>
           </h3>
           <a class="btn product-view" href="#">Быстрый просмотр</a>
         </article>
@@ -283,9 +303,9 @@
           <img class="product-photo" src="img/products/catalog/icecream-menthol.jpg" alt="Изображение мороженого">
           <p class="price">435 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <span class="product-title-underline">
+            <a class="product-title-underline">
               Сливочноe с ментоловым сиропом
-            </span>
+            </a>
           </h3>
           <a class="btn product-view" href="#">Быстрый просмотр</a>
         </article>
@@ -293,9 +313,9 @@
           <img class="product-photo" src="img/products/catalog/icecream-chocolate-black.jpg" alt="Изображение мороженого">
           <p class="price">355 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <span class="product-title-underline">
+            <a class="product-title-underline">
               Сливочное с кусочками черного шоколада
-            </span>
+            </a>
           </h3>
           <a class="btn product-view" href="#">Быстрый просмотр</a>
         </article>
@@ -303,9 +323,9 @@
           <img class="product-photo" src="img/products/catalog/icecream-mint.jpg" alt="Изображение мороженого">
           <p class="price">420 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <span class="product-title-underline">
+            <a class="product-title-underline">
               Сливочное с мятным сиропом
-            </span>
+            </a>
           </h3>
           <a class="btn product-view" href="#">Быстрый просмотр</a>
         </article>
