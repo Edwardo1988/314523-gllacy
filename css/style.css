@@ -1388,6 +1388,10 @@ body {
   margin-bottom: 16px;
 }
 
+.filter-item:last-of-type {
+  clear: left;
+}
+
 .options {
   display: block;
 
@@ -1550,13 +1554,13 @@ body {
   background-repeat: no-repeat;
   display: inline-block;
   width: 21px;
-  height: 20px;
+  height: 21px;
   position: relative;
   top: 4px;
   left: -2px;
   margin-right: 8px;
 }
-
+ 
 .builder input[type="checkbox"] + label::before {
   content: "";
   background-image: url("../img/icons-sprite.png");
@@ -1568,29 +1572,29 @@ body {
   top: 5px;
   margin-right: 11px;
 }
-
+ 
 /* fatness bg position */
-
+ 
 .fatness input[type="radio"] + label::before {
   background-position: 0 -452px;
 }
-
+ 
 .fatness input[type="radio"]:checked + label::before {
   background-position: -21px -474px;
 }
-
+ 
 .fatness input[type="radio"] + label:hover::before {
   background-position: -21px -430px;
 }
-
+ 
 .fatness input[type="radio"]:checked + label:hover::before {
   background-position: -21px -452px;
 }
-
+ 
 .fatness input[type="radio"]:disabled + label::before {
   background-position: 0 -430px;
 }
-
+ 
 .fatness input[type="radio"]:checked:disabled + label::before {
   background-position: 0 -474px;
 }
