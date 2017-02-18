@@ -6,6 +6,8 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+
+  <script type="text/javascript" src="js/scripts.js"></script>
 </head>
 
 <body class="index">
@@ -88,7 +90,11 @@
             </form>
           </div>
         </div>
-        <div class="basket">Пусто</div>
+        <div class="basket">
+          <div class="basket-btn">
+            Пусто
+          </div>
+        </div>
 
       </div>
       <div class="schedule">
@@ -136,7 +142,7 @@
           <img class="product-photo" src="img/products/main/icecream-orange.jpg" alt="Изображение мороженого">
           <p class="price">310 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <a class="product-title-underline">
+            <a class="product-title-underline link-general">
               Сливочное с апельсиновым джемом и цитрусовой стружкой
             </a>
           </h3>
@@ -146,7 +152,7 @@
           <img class="product-photo" src="img/products/main/icecream-coffee.jpg" alt="Изображение мороженого">
           <p class="price">380 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <a class="product-title-underline">
+            <a class="product-title-underline link-general">
               Сливочно-кофейное с кусочками шоколада
             </a>
           </h3>
@@ -156,7 +162,7 @@
           <img class="product-photo" src="img/products/main/icecream-strawberry.jpg" alt="Изображение мороженого">
           <p class="price">355 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <a class="product-title-underline">
+            <a class="product-title-underline link-general">
               Сливочно-клубничное с присыпкой из белого шоколада
             </a>
           </h3>
@@ -166,7 +172,7 @@
           <img class="product-photo" src="img/products/main/icecream-caramel.jpg" alt="Изображение мороженого">
           <p class="price">415 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <a class="product-title-underline">
+            <a class="product-title-underline link-general">
               Сливочное крем-брюле с карамельной подливкой
             </a>
           </h3>
@@ -240,21 +246,20 @@
     <div class="map-pin">
     </div>
     <div class="contacts">
-      <p class="contacts-text">
+      <div class="contacts-text">
         Адрес главного офиса<br>
-        и офлайн магазина:<br>
-      <span class="address-text">
+        и офлайн магазина:</div>
+      <div class="address-text">
         ул. Большая Конюшенная 19/8, Санкт-Петербург
-      </span>
-      </p>
-      <p class="contacts-text">
+      </div>
+      <div class="contacts-text">
         Для заказов по телефону:<br>
       <span class="phone-text">
         8 812 450-25-25
       </span><br>
         (с 10 до 20 ежедневно)
-      </p>
-      <a class="btn contacts-feedback" href="#">
+      </div>
+      <a class="btn contacts-feedback" href="feedback.html">
         Форма обратной связи
       </a>
     </div>
@@ -269,12 +274,12 @@
         <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
       </section>
       <section class="about-company">
-        <div class="about-double-block">
+        <div class="about-double-suppliers">
           <div class="for-suppliers"></div>
           <a class="about-item link-general" href="#">Для поставщиков</a>
           <a class="about-item link-general" href="#">О производстве</a>
         </div>
-        <div class="about-double-block">
+        <div class="about-double-documents">
           <a class="about-item link-general" href="#">Наши документы</a>
           <a class="about-item link-general" href="#">Экологические стандарты</a>
         </div>
@@ -286,8 +291,9 @@
     </div>
   </footer>
 
-  <div class="feedback-pop-up">
+  <div class="feedback-pop-up form-hidden">
     <form class="feedback-form" method="post">
+      <div class="feedback-close-icon"></div>
       <b class="feedback-title">Мы обязательно вам ответим!</b>
 
       <input class="form-text feedback-form-text" id="feedback-user-name" type="text" name="user-name" placeholder="Как вас зовут?" required>
@@ -302,6 +308,8 @@
       <input class="btn feedback-btn" type="submit" name="Отправить">
     </form>
   </div>
+  
+  <script src="js/scripts.js"></script>
 
 </body>
 </html>

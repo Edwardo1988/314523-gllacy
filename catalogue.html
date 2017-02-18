@@ -25,7 +25,7 @@
                 <a href="#">Новинки</a>
               </li>
               <li class="submenu-item submenu-list">
-                <a class="submenu-opened" href="catalog.html">Сливочное</a>
+                <a class="submenu-opened">Сливочное</a>
               </li>
               <li class="submenu-item submenu-list">
                 <a href="#">Щербеты</a>
@@ -63,7 +63,7 @@
               <input class="form-text login-form-email" id="email" type="email" name="email" placeholder="Электронная почта" required>
               <label class="form-label email-label" for="email">Электронная почта</label>
 
-              <input class="form-text login-form-email" id="password" type="password" name="password" placeholder="Пароль">
+              <input class="form-text login-form-email" id="password" type="password" name="password" placeholder="Пароль" required>
               <label class="form-label login-password-label" for="password">Пароль</label>
 
               <a class="btn login-form-btn" href="#">Войти</a>
@@ -140,7 +140,7 @@
       <form class="filters clearfix" method="post">
         <div class="filter-item"> 
           <label for="sort"><b class="options">Сортировка:</b></label>
-          <div class="filter-bg">
+          <div class="filter-bg sort-bg">
             <select class="sort" id="sort">
               <option value="s1">по популярности</option>
               <option value="s2">сначала недорогие</option>
@@ -182,7 +182,7 @@
         </div>
         <div class="filter-item"> 
           <b class="options">Наполнители:</b>
-          <div class="filter-bg">
+          <div class="filter-bg builder-bg">
             <div class="builder">
               <input type="checkbox" name="option1" id="chocolate" value="b1" checked>
               <label for="chocolate">шоколадные</label>
@@ -213,7 +213,7 @@
           <img class="product-photo" src="img/products/main/icecream-orange.jpg" alt="Изображение мороженого">
           <p class="price">310 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <a class="product-title-underline">
+            <a class="product-title-underline link-general">
               Сливочное с апельсиновым джемом и цитрусовой стружкой
             </a>
           </h3>
@@ -223,7 +223,7 @@
           <img class="product-photo" src="img/products/main/icecream-coffee.jpg" alt="Изображение мороженого">
           <p class="price">380 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <a class="product-title-underline">
+            <a class="product-title-underline link-general">
               Сливочно-кофейное с кусочками шоколада
             </a>
           </h3>
@@ -233,7 +233,7 @@
           <img class="product-photo" src="img/products/main/icecream-strawberry.jpg" alt="Изображение мороженого">
           <p class="price">355 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <a class="product-title-underline">
+            <a class="product-title-underline link-general">
               Сливочно-клубничное с присыпкой из белого шоколада
             </a>
           </h3>
@@ -243,7 +243,7 @@
           <img class="product-photo" src="img/products/main/icecream-caramel.jpg" alt="Изображение мороженого">
           <p class="price">415 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <a class="product-title-underline">
+            <a class="product-title-underline link-general">
               Сливочное крем-брюле с карамельной подливкой
             </a>
           </h3>
@@ -253,7 +253,7 @@
           <img class="product-photo" src="img/products/catalog/icecream-cowberry.jpg" alt="Изображение мороженого">
           <p class="price">325 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <a class="product-title-underline">
+            <a class="product-title-underline link-general">
               Сливочное с брусничным джемом
             </a>
           </h3>
@@ -263,7 +263,7 @@
           <img class="product-photo" src="img/products/catalog/icecream-bilberry.jpg" alt="Изображение мороженого">
           <p class="price">410 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <a class="product-title-underline">
+            <a class="product-title-underline link-general">
               Сливочно-черничное с цельными ягодами черники
             </a>
           </h3>
@@ -273,7 +273,7 @@
           <img class="product-photo" src="img/products/catalog/icecream-lemon.jpg" alt="Изображение мороженого">
           <p class="price">375 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <a class="product-title-underline">
+            <a class="product-title-underline link-general">
               Сливочно-лимонное с карамельной присыпкой
             </a>
           </h3>
@@ -283,7 +283,7 @@
           <img class="product-photo" src="img/products/catalog/icecream-chocolate-chips.jpg" alt="Изображение мороженого">
           <p class="price">320 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <a class="product-title-underline">
+            <a class="product-title-underline link-general">
               Сливочное с шоколадной стружкой
             </a>
           </h3>
@@ -293,7 +293,7 @@
           <img class="product-photo" src="img/products/catalog/icecream-chocolate-pieces.jpg" alt="Изображение мороженого">
           <p class="price">440 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <a class="product-title-underline">
+            <a class="product-title-underline link-general">
               Сливочно-ванильное с кусочками шоколада
             </a>
           </h3>
@@ -303,7 +303,7 @@
           <img class="product-photo" src="img/products/catalog/icecream-menthol.jpg" alt="Изображение мороженого">
           <p class="price">435 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <a class="product-title-underline">
+            <a class="product-title-underline link-general">
               Сливочноe с ментоловым сиропом
             </a>
           </h3>
@@ -313,7 +313,7 @@
           <img class="product-photo" src="img/products/catalog/icecream-chocolate-black.jpg" alt="Изображение мороженого">
           <p class="price">355 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <a class="product-title-underline">
+            <a class="product-title-underline link-general">
               Сливочное с кусочками черного шоколада
             </a>
           </h3>
@@ -323,7 +323,7 @@
           <img class="product-photo" src="img/products/catalog/icecream-mint.jpg" alt="Изображение мороженого">
           <p class="price">420 &#8381;<span class="price-mass">/кг</span></p>
           <h3 class="product-title">
-            <a class="product-title-underline">
+            <a class="product-title-underline link-general">
               Сливочное с мятным сиропом
             </a>
           </h3>
@@ -340,7 +340,7 @@
     </div>
   </main>
 
-  <footer class="main-footer clearfix">
+  <footer class="main-footer catalogue-footer clearfix">
     <div class="container">
       <section class="footer-social">
         <a class="social-btn social-btn-tw" href="#">Твиттер</a>
@@ -349,12 +349,12 @@
         <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
       </section>
       <section class="about-company">
-        <div class="about-double-block">
+        <div class="about-double-suppliers">
           <div class="for-suppliers"></div>
           <a class="about-item link-general" href="#">Для поставщиков</a>
           <a class="about-item link-general" href="#">О производстве</a>
         </div>
-        <div class="about-double-block">
+        <div class="about-double-documents">
           <a class="about-item link-general" href="#">Наши документы</a>
           <a class="about-item link-general" href="#">Экологические стандарты</a>
         </div>
