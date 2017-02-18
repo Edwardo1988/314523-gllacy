@@ -129,7 +129,7 @@ body {
   padding: 10px 42px;
 
   font-size: 32px;
-  line-height: 43.2px;
+  line-height: 44px;
   font-weight: 700;
 }
 
@@ -535,7 +535,8 @@ body {
 .login-form-btn {
   float: left;
   padding: 10px 25px;
-  margin-right: 21px;
+  margin-right: 15px;
+  border: none;
 
   font-size: 18px;
   line-height: 24px;
@@ -715,7 +716,6 @@ body {
 
 .schedule {
   float: right;
-  clear: right;
   text-align: right;
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: 700;
@@ -756,7 +756,6 @@ body {
   color: #fceeec;
   background: linear-gradient(#c73f2c, #e1613e);
   box-shadow: inset 0 2px 2 0 #942718;
-  box-shadow: 0 0 0 0;
   cursor: pointer;
 }
 
@@ -782,11 +781,11 @@ body {
 }
 
 .banner-item-jam {
-  background: url(../img/patterns/malina-banner-background.jpg) repeat -39px -92px;
+  background: url("../img/patterns/malina-banner-background.jpg") repeat -39px -92px;
 }
 
 .banner-item-chocolate {
-  background: url(../img/patterns/chocolate-banner-background.jpg) repeat -115px -100px;
+  background: url("../img/patterns/chocolate-banner-background.jpg") repeat -115px -100px;
 }
 
 .banner-name {
@@ -881,7 +880,7 @@ body {
 .product-teaser-hit::before {
   position: absolute;
   content: "";
-  background: url(../img/products/hit-icon.png) no-repeat;
+  background: url("../img/products/hit-icon.png") no-repeat;
   display: block;
   width: 60px;
   height: 60px;
@@ -946,7 +945,7 @@ body {
 .company-seo {
   margin-bottom: 40px;
 
-  background: url(../img/patterns/waffle-pattern.jpg) repeat;
+  background: url("../img/patterns/waffle-pattern.jpg") repeat;
   border-radius: 15px;
   color: #323232;
 }
@@ -1132,7 +1131,7 @@ body {
   position: absolute;
   width: 218px;
   height: 142px;
-  background: url(../img/map/pin-map.png);
+  background: url("../img/map/pin-map.png");
   left: 267px;
   top: 138px;
 }
@@ -1270,6 +1269,7 @@ body {
   display: inline-block;
   width: 15px;
   min-height: 14px; 
+  vertical-align: top;
 }
 
 .footer-copyright {
@@ -1280,7 +1280,7 @@ body {
 }
 
 .academy-logo {
-  background: url(../img/logo/academy-logo.png) no-repeat;
+  background: url("../img/logo/academy-logo.png") no-repeat;
   width: 108px;
   min-height: 38px;
   margin-bottom: 5px;
@@ -1340,6 +1340,8 @@ body {
 
   margin-right: 4px;
   padding-bottom: 0;
+
+  vertical-align: top;
 }
 
 .breadcrumbs-list li a {
@@ -1353,6 +1355,7 @@ body {
   content: "\00BB";
   display: inline-block;
   padding-left: 4px;
+  vertical-align: top;
 }
 
 /* catalogue-page-title */
@@ -1413,7 +1416,7 @@ body {
     content: "";
     display: block;
     position: absolute;
-    top: 16px;
+    top: 14px;
     right: 15px;
     width: 0;
     height: 0;
@@ -1434,8 +1437,8 @@ body {
   line-height: 18px;
   font-weight: 500;
   color: #fff;
-  margin: 5px -15px 1px -1px;
   width: 167px;
+  padding: 2px 0;
 }
 
 .sort-bg select::-ms-expand {
@@ -1448,6 +1451,7 @@ body {
   display: inline-block;
   border: 5px solid transparent;
   border-top: 5px solid #fff;
+  vertical-align: top;
 }
 
 .sort-bg:hover {
@@ -1470,7 +1474,7 @@ body {
   height: 4px;
   background-color: rgba(255, 255, 255, 0.5);
   position: relative;
-  margin: 12px -3px 8px -1px;
+  margin: 12px -3px 7px -1px;
   outline: none;
 }
 
@@ -1507,14 +1511,16 @@ body {
 
 .fatness {
   display: inline-block;
+  vertical-align: top;
 }
 
 .builder-bg {
-  padding-bottom: 8px;
+  padding-bottom: 7px;
 }
 
 .builder {
   display: inline-block;
+  vertical-align: top;
 }
 
 .fatness input[type="radio"],
@@ -1693,7 +1699,6 @@ body {
 
 .pagination-page:hover {
   background-color: rgba(255,255,255,0.2);
-  color: ;
   cursor: pointer;
 }
 
