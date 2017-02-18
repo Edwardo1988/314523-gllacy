@@ -1403,7 +1403,7 @@ body {
 }
 
 .filter-bg {
-  padding: 3px 18px 7px 16px;
+  padding: 3px 12px 7px 16px;
   background-color: rgba(255,255,255,0.2);
   border-radius: 45px;
   font-size: 16px;
@@ -1520,6 +1520,7 @@ body {
 
 .builder-bg {
   padding-bottom: 7px;
+  padding-right: 20px;
 }
 
 .builder {
