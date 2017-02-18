@@ -37,9 +37,9 @@ body {
   display: none;
 }
 
-#slide-teal:checked ~ .page-background .page-teal,
-#slide-blue:checked ~ .page-background  .page-blue,
-#slide-chestnut:checked ~ .page-background .page-chestnut {
+.slide-teal:checked ~ .page-background .page-teal,
+.slide-blue:checked ~ .page-background  .page-blue,
+.slide-chestnut:checked ~ .page-background .page-chestnut {
   display: block;
 }
 
@@ -92,9 +92,9 @@ body {
   cursor: pointer;
 }
 
-#slide-teal:checked ~ .main .slider-toggle[for="slide-teal"],
-#slide-blue:checked ~ .main .slider-toggle[for="slide-blue"],
-#slide-chestnut:checked ~ .main .slider-toggle[for="slide-chestnut"] {
+.slide-teal:checked ~ .main .slider-toggle[for="slide-teal"],
+.slide-blue:checked ~ .main .slider-toggle[for="slide-blue"],
+.slide-chestnut:checked ~ .main .slider-toggle[for="slide-chestnut"] {
   background: #fff;
 }
 
